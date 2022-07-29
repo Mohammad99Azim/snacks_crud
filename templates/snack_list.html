@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Snack List</h1>
+
+{% for snack in snacks_list  %}
+<h3><a href="/{{snack.id}}"> {{ snack.title }} </a></h3>
+{% endfor %}
+
+    <button onclick="window.location.href='{% url 'create_snack' %}';">
+        Create New Snack
+    </button>
+
+{% endblock content %}

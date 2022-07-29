@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>snack detail</h1>
+
+<h3>Title: {{snack_detail.title}}</h3>
+
+<h3>Purchaser: {{snack_detail.purchaser}}</h3>
+
+<h3>Description: {{snack_detail.description}}</h3>
+
+    <button style="float: right; margin-right: 50px" onclick="window.location.href='/';">
+        Back To Home
+    </button>
+
+    <button onclick="window.location.href='{% url 'update_snack' snack_detail.pk %}';">
+        Update Snack
+    </button>
+    <button onclick="window.location.href='{% url 'delete_snack' snack_detail.pk %}';">
+        Delete Snack
+    </button>
+
+{% endblock content %}
